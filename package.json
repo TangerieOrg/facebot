@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "start": "ts-node .",
-    "dev": "ts-node-dev --respawn ."
+    "dev": "ts-node-dev --respawn .",
+    "build": "tsc"
   },
   "author": "Tangerie <josh.cavill01@gmail.com> (https://github.com/Tangerie)",
   "license": "ISC",
