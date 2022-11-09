@@ -1,10 +1,14 @@
 import { Client } from "discord.js";
 
 import dotenv from "dotenv";
+import RegisterCommands, { addCommand } from "./commands";
+import FaceCommand from "./commands/face";
+import ScanCommand from "./commands/scan";
+import SimilarCommand from "./commands/similar";
 import listeners from "./listeners";
 dotenv.config();
 
-console.log("Starting Client", process.env);
+console.log("Starting Client");
 
 const client = new Client({
     intents: [
@@ -29,6 +33,13 @@ const client = new Client({
         "AutoModerationExecution"
     ]
 })
+
+// addCommand(PingCommand);
+addCommand(FaceCommand);
+addCommand(SimilarCommand);
+addCommand(ScanCommand)
+
+RegisterCommands();
 
 listeners(client);
 

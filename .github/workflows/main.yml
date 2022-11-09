@@ -15,4 +15,5 @@ jobs:
     - name: Build and run the Docker image
       env:
         BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        BOT_CLIENT_ID: ${{ secrets.BOT_CLIENT_ID }}
       run: docker compose up --build -d --no-deps --force-recreate
