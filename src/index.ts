@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import listeners from "./listeners";
 dotenv.config();
 
-console.log("Starting Client");
+console.log("Starting Client", process.env);
 
 const client = new Client({
     intents: [
